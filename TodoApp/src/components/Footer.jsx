@@ -1,7 +1,9 @@
-export function Footer({ completedTodos }) {
+import styles from "./footer.module.css";
+export function Footer({ completedTodos, totalTodos }) {
   return (
-    <div>
-      <span>Completed Todos:{completedTodos}</span>
+    <div className={styles.footer}>
+      <span className={styles.item}>Completed Todos:{completedTodos}</span>
+      <span className={styles.item}>Total Todos:{totalTodos}</span>
     </div>
   );
 }
